@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewEventViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <NewEventDelegate>
 
 
 @end

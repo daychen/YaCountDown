@@ -15,6 +15,7 @@
 		63F88BB21B969B7600E760DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F88BB01B969B7600E760DE /* LaunchScreen.storyboard */; };
 		63F88BBD1B969B7600E760DE /* YaCountDownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F88BBC1B969B7600E760DE /* YaCountDownTests.m */; };
 		63F88BC81B969B7600E760DE /* YaCountDownUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F88BC71B969B7600E760DE /* YaCountDownUITests.m */; };
+		63F88BD71B96CFD000E760DE /* NewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F88BD61B96CFD000E760DE /* NewEventViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		63F88BC31B969B7600E760DE /* YaCountDownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaCountDownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F88BC71B969B7600E760DE /* YaCountDownUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YaCountDownUITests.m; sourceTree = "<group>"; };
 		63F88BC91B969B7600E760DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63F88BD51B96CFD000E760DE /* NewEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventViewController.h; sourceTree = "<group>"; };
+		63F88BD61B96CFD000E760DE /* NewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				63F88BA61B969B7500E760DE /* AppDelegate.m */,
 				63F88BA81B969B7500E760DE /* ViewController.h */,
 				63F88BA91B969B7500E760DE /* ViewController.m */,
+				63F88BD51B96CFD000E760DE /* NewEventViewController.h */,
+				63F88BD61B96CFD000E760DE /* NewEventViewController.m */,
 				63F88BAB1B969B7500E760DE /* Main.storyboard */,
 				63F88BAE1B969B7600E760DE /* Assets.xcassets */,
 				63F88BB01B969B7600E760DE /* LaunchScreen.storyboard */,
@@ -275,6 +280,7 @@
 			files = (
 				63F88BAA1B969B7500E760DE /* ViewController.m in Sources */,
 				63F88BA71B969B7500E760DE /* AppDelegate.m in Sources */,
+				63F88BD71B96CFD000E760DE /* NewEventViewController.m in Sources */,
 				63F88BA41B969B7500E760DE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
