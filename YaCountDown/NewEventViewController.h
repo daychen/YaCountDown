@@ -14,7 +14,7 @@
 
 @end
 
-@interface NewEventViewController : UIViewController
+@interface NewEventViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property id<NewEventDelegate> delegate;
 @end

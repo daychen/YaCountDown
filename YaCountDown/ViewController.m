@@ -43,6 +43,7 @@
 
     for (NSString *s in value) {
         self.eventValueLabel.text =[self.eventValueLabel.text stringByAppendingString:s];
+        NSLog(@"this value is %@",s);
     }
 
 }

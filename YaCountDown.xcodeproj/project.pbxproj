@@ -81,6 +81,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6318D04C1B9BF127002674A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		63F88B961B969B7500E760DE = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +111,7 @@
 		63F88BA11B969B7500E760DE /* YaCountDown */ = {
 			isa = PBXGroup;
 			children = (
+				6318D04C1B9BF127002674A8 /* Model */,
 				63F88BA51B969B7500E760DE /* AppDelegate.h */,
 				63F88BA61B969B7500E760DE /* AppDelegate.m */,
 				63F88BA81B969B7500E760DE /* ViewController.h */,
@@ -505,6 +513,7 @@
 				63F88BCE1B969B7600E760DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63F88BCF1B969B7600E760DE /* Build configuration list for PBXNativeTarget "YaCountDownTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +522,7 @@
 				63F88BD11B969B7600E760DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63F88BD21B969B7600E760DE /* Build configuration list for PBXNativeTarget "YaCountDownUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +531,7 @@
 				63F88BD41B969B7600E760DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

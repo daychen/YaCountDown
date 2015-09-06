@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "NewEventViewController.h"
 
-@interface ViewController : UIViewController <NewEventDelegate>
+@interface ViewController : UIViewController <NewEventDelegate>{
+    UILabel *value;
+
+}
 
 
 @end
