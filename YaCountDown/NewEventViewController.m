@@ -29,7 +29,6 @@
     if (!_eventTableView) {
         _eventTableView=[[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
         
-      
     }
 
     return _eventTableView;
@@ -64,8 +63,7 @@
         //init table view, add in storyboard instead
         self.eventTableView.backgroundColor=[UIColor clearColor];
 
-   
-    
+ 
   
 }
 
@@ -120,17 +118,33 @@
     
     if(cell ==nil){
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
         
     }
     
     cell.textLabel.text=[self.dataList objectAtIndex:[indexPath row]];
     //cell.detailTextLabel.hidden=YES;
-    [[cell viewWithTag:3]removeFromSuperview];
+   // [[cell viewWithTag:3]removeFromSuperview];
+  //  tfd.tag=3;
+    if ([indexPath row]==0) {
+        [self createTextFieldInCell:cell];
+    }
+    
+   
+  
+    return cell;
+}
+
+
+-(UITextField *)createTextFieldInCell:(UITableViewCell *)cell{
+
     UITextField *tfd=[[UITextField alloc]init];
-   // tfd.backgroundColor=[UIColor greenColor];
-    tfd.translatesAutoresizingMaskIntoConstraints=NO;
     tfd.tag=3;
+    tfd.translatesAutoresizingMaskIntoConstraints=NO;
+    tfd.backgroundColor=[UIColor clearColor];
     [cell.contentView addSubview:tfd];
+    NSLog(@"check cell tag %@",[cell viewWithTag:3]);
+    
     [cell addConstraint:[NSLayoutConstraint constraintWithItem:tfd attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:cell.textLabel attribute:NSLayoutAttributeTrailing multiplier:1 constant:8]];
     [cell addConstraint:[NSLayoutConstraint constraintWithItem:tfd attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeTop
                                                     multiplier:1 constant:8]];
@@ -139,9 +153,11 @@
     [cell addConstraint:[NSLayoutConstraint constraintWithItem:tfd attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
     
     tfd.textAlignment=NSTextAlignmentRight;
-    return cell;
-}
+    
 
+
+    return tfd;
+}
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     cell.backgroundColor=[UIColor clearColor];
