@@ -129,6 +129,10 @@
     if ([indexPath row]==0) {
         [self createTextFieldInCell:cell];
     }
+    else if ([indexPath row]==1){
+        UILabel *label=(UILabel *)[cell viewWithTag:2];
+        label.text=@"date";
+    }
     
    
   

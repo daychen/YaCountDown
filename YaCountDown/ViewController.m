@@ -8,10 +8,14 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *countDownNumberLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *eventValueLabel;
+
+
+@property(strong, nonatomic)NSArray *eventList;
+@property (strong, nonatomic) IBOutlet UITableView *allEventsTableView;
 
 
 @end
@@ -21,6 +25,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    //init tableview
+    _allEventsTableView=[[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
+    _allEventsTableView.backgroundColor=[UIColor clearColor];
+    
+    //init table datasource
+    
+    [self initTabelEventData];
+    
+   
+}
+
+-(void)initTabelEventData{
+
+    self.eventList=[NSArray arrayWithObjects:@"3",@"4", nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +66,38 @@
         self.eventValueLabel.text =[self.eventValueLabel.text stringByAppendingString:s];
         NSLog(@"this value is %@",s);
     }
+
+}
+
+
+#pragma mark delegate method
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"homepagecell"];
+    if (cell==nil) {
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"homepagecell"];
+        cell.backgroundColor=[UIColor clearColor];
+    }
+    
+    cell.textLabel.text=[self.eventList objectAtIndex:[indexPath row]];
+    
+    UILabel *daycountlabel=(UILabel*)[cell viewWithTag:5];
+    daycountlabel.text=@"100";
+    
+    NSLog(@"check UILabel of tag 5 %@",[cell viewWithTag:5]);
+    return cell;
+    
+}
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.eventList count];
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //open a detail view of each event
 
 }
 
